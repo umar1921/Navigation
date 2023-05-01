@@ -28,7 +28,7 @@ const LoginScreen = ({ navigation }) => {
           style={styles.TextInput}
           value={email}
           onChangeText={(email) => setEmail(email)}
-          placeholder="Email"
+          placeholder="Enter Your Email"
           placeholderTextColor="#003f5c"
           keyboardType="email-address"
           autoCapitalize="none"
@@ -40,7 +40,7 @@ const LoginScreen = ({ navigation }) => {
           style={styles.TextInput}
           value={password}
           onChangeText={(password) => setPassword(password)}
-          placeholder="Password"
+          placeholder="Enter Your Password"
           placeholderTextColor="#003f5c"
           keyboardType="number-pad"
           autoCapitalize="none"
