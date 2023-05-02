@@ -30,8 +30,8 @@ const LoginScreen = ({ navigation }) => {
     <KeyboardAvoidingView style={styles.container} behavior="height">
       <View style={{ marginBottom: 10 }}>
         <Image
-          source={require("../../assets/adaptive-icon.png")}
-          style={{ width: 100, height: 100 }}
+          source={require("../../assets/logo.png")}
+          style={{ width: 150, height: 150 }}
         />
       </View>
       <View style={styles.inputView}>

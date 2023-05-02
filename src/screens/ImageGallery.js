@@ -6,6 +6,7 @@ import {
   Dimensions,
   ScrollView,
   SafeAreaView,
+  StatusBar,
 } from "react-native";
 import React from "react";
 import Images from "./Images";
@@ -15,17 +16,18 @@ let devicewidth = Dimensions.get("window").width;
 
 const ImageGallery = (props) => {
   return (
-    <SafeAreaView style={{ marginTop: "8%" }}>
+    <SafeAreaView style={{ backgroundColor: "#000" }}>
+      <StatusBar hidden={true} />
       <View
         style={{
           height: 50,
-          backgroundColor: "#ff0000",
           display: "flex",
           justifyContent: "center",
-          paddingLeft: '10%'
+          paddingLeft: "10%",
+          marginBottom: 20,
         }}
       >
-        <Text style={{fontSize: 25, color: 'white'}}>Gallery</Text>
+        <Text style={{ fontSize: 25, color: "white" }}>Gallery</Text>
       </View>
       <ScrollView>
         <View
