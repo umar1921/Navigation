@@ -24,7 +24,6 @@ const ProductsScreen = () => {
       fetch("https://dummyjson.com/products")
         .then((res) => res.json())
         .then((json) => {
-          // console.log(json.products);
           setProducts(json.products);
           setLoading(false);
         });

@@ -14,6 +14,17 @@ import CustomButton from "../components/CustomButton";
 const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [user, setUser] = useState("Umar");
+
+  const handleLogin = () => {
+    navigation.navigate("Profile", {
+      email: email,
+      password: password,
+      user: user,
+    });
+    setEmail("");
+    setPassword("");
+  };
 
   return (
     <KeyboardAvoidingView style={styles.container} behavior="height">
@@ -45,14 +56,10 @@ const LoginScreen = ({ navigation }) => {
           keyboardType="number-pad"
           autoCapitalize="none"
           secureTextEntry={true}
-          onSubmitEditing={Keyboard.dismiss}
         />
       </View>
       <View style={styles.buttonView}>
-        <CustomButton
-          onPress={() => navigation.navigate("Profile")}
-          text="Login"
-        />
+        <CustomButton onPress={() => handleLogin()} text="Login" />
       </View>
     </KeyboardAvoidingView>
   );
